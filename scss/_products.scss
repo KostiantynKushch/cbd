@@ -1,0 +1,164 @@
+.ba-products {
+  padding: 50px 0 60px;
+  @media screen and (min-width: 1024px) {
+    padding: 98px 0 140px;
+  }
+  // .ba-products__title
+
+  &__title {
+    color: #1c1c1b;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-align: center;
+    margin-bottom: 40px;
+    @media screen and (min-width: 1024px) {
+      font-size: 30px;
+      margin-bottom: 80px;
+    }
+  }
+
+  // .ba-products__slider
+
+  &__slider {
+    overflow-x: hidden;
+    @media screen and (min-width: 640px) {
+      /* the slides */
+      .slick-slide {
+        margin: 0 10px;
+      }
+      /* the parent */
+      .slick-list {
+        margin: 0 -10px;
+      }
+    }
+  }
+
+  // .ba-products__slide
+
+  &__slide {
+    outline: none;
+    @media screen and (min-width: 640px) {
+      // margin-right: 40px;
+    }
+  }
+
+  // .ba-products__navigation
+
+  &__navigation {
+    max-width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (min-width: 1024px) {
+      max-width: 10%;
+    }
+  }
+
+  // .ba-products__prev
+
+  &__prev {
+    transform: rotate(-180deg);
+  }
+
+  // .ba-products__next
+
+  &__next {
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    outline: none;
+    &:focus,
+    &:hover {
+      opacity: 0.6;
+    }
+    .icon {
+      width: 40px;
+      height: 20px;
+    }
+  }
+}
+.ba-product {
+  &__card {
+    background-color: #fff;
+    border: 1px solid #ced6af;
+  }
+  // .ba-product__header
+
+  &__header {
+    text-align: center;
+    padding-top: 39px;
+    margin-bottom: 60px;
+  }
+
+  // .ba-product__rate
+
+  &__rate {
+    .icon {
+      width: 16px;
+      height: 15px;
+    }
+  }
+
+  // .ba-product__title
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  // .ba-product__img
+
+  &__img {
+    width: 170px;
+    height: 260px;
+    object-fit: contain;
+    margin: 0 auto 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .ba-product__footer
+
+  &__footer {
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    max-height: 70px;
+    margin-bottom: 60px;
+  }
+
+  // .ba-product__btn
+
+  &__btn {
+  }
+}
+.icon {
+}
+.broduct {
+  // .broduct__price
+
+  &__price {
+    color: #1c1c1b;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 75px;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+  }
+}
+.ba-button {
+  // .ba-button--green
+
+  &--green {
+  }
+}

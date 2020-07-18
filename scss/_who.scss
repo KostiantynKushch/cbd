@@ -1,0 +1,179 @@
+.ba-who {
+  // .ba-who__inner
+
+  &__inner {
+    padding: 50px 0 60px;
+    @media screen and (min-width: 1024px) {
+      padding: 98px 0 140px;
+    }
+  }
+
+  // .ba-who__header
+
+  &__header {
+    background: url(../img/Holder.png) no-repeat center;
+    background-size: contain;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    @media screen and (min-width: 640px) {
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 120px;
+    }
+  }
+
+  // .ba-who__title
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 4.8px;
+    font-weight: 400;
+    color: #1c1c1b;
+    @media screen and (min-width: 1024px) {
+      font-size: 24px;
+    }
+  }
+
+  // .ba-who__logos
+
+  &__logos {
+    width: 90%;
+    margin: 0 auto;
+    @media screen and (min-width: 425px) {
+      width: 70%;
+    }
+    @media screen and (min-width: 640px) {
+      width: 50%;
+    }
+  }
+
+  // .ba-who__tabs
+
+  &__tabs {
+  }
+}
+
+.ba-tabs {
+  // .ba-tabs__nav
+
+  &__nav {
+    margin-bottom: 30px;
+    position: relative;
+    @media screen and (min-width: 640px) {
+      margin-bottom: 50px;
+      border-bottom: 2px solid #ced6af;
+    }
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 80px;
+    }
+  }
+
+  // .ba-tabs__link
+
+  &__link {
+    color: #1c1c1b;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 2px solid #ced6af;
+    position: relative;
+
+    @media screen and (min-width: 640px) {
+      font-size: 20px;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 30px;
+    }
+    &.active {
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #1c1c1b;
+        @media screen and (min-width: 640px) {
+          bottom: -9px;
+        }
+        @media screen and (min-width: 1024px) {
+          bottom: -12px;
+        }
+      }
+    }
+    @media screen and (min-width: 640px) {
+      border: none;
+    }
+  }
+
+  &__link + &__link {
+    margin-left: 10px;
+    @media screen and (min-width: 1024px) {
+      margin-left: 100px;
+    }
+  }
+
+  // .ba-tabs__content
+
+  &__content {
+  }
+}
+
+.ba-tab {
+  // .ba-tab__left-part
+  position: relative;
+
+  &__left-part {
+    @media screen and (min-width: 1024px) {
+      width: 50%;
+      padding-right: 8%;
+    }
+  }
+
+  // .ba-tab__title
+
+  &__title {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4.8px;
+    @media screen and (min-width: 640px) {
+      font-size: 18px;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 24px;
+    }
+  }
+
+  // .ba-tab__text
+
+  &__text {
+    color: #6e774a;
+    font-size: 16px;
+    font-weight: 300;
+    /* Text style for "CBD is sho" */
+    letter-spacing: 0.72px;
+    @media screen and (min-width: 1024px) {
+      font-size: 18px;
+    }
+  }
+
+  // .ba-tab__right-part
+
+  &__right-part {
+    text-align: center;
+    @media screen and (min-width: 1024px) {
+      text-align: initial;
+      position: absolute;
+      top: 0;
+      right: -8%;
+      width: 50%;
+    }
+  }
+}

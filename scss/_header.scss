@@ -1,0 +1,247 @@
+.ba-header {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-bottom: 1px solid rgba($color: #fff, $alpha: 0.4);
+  &__inner {
+    position: relative;
+  }
+  &__oper {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+  }
+  &.scrolls {
+    background-color: rgba($color: #fff, $alpha: 0.5);
+    color: #000;
+  }
+}
+
+.ba-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// navigation
+.ba-nav {
+  position: absolute;
+  top: -100vh;
+  // .ba-nav__list
+  @media screen and (min-width: 1024px) {
+    position: initial;
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    transition: transform 0.4s;
+    margin: 0;
+
+    @media screen and (min-width: 1024px) {
+      transform: initial;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__oper {
+    transition: transform 0.4s;
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  // .ba-nav__item
+
+  &__item {
+  }
+
+  // .ba-nav__link
+
+  &__link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.96px;
+    &--active {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -20%;
+        height: 2px;
+        width: 140%;
+        background-color: #9db892;
+      }
+    }
+  }
+
+  &--active {
+    .ba-nav {
+      &__list {
+        transform: translateY(calc(100vh + 60px));
+      }
+      &__oper {
+        transform: translateY(calc(100vh + 60px));
+      }
+      &__item {
+      }
+
+      &__link {
+      }
+    }
+  }
+  // .ba-nav__hamb
+
+  &__hamb {
+  }
+}
+
+.ba-hamb {
+  border: none;
+  outline: none;
+  background: transparent;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  z-index: 3;
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+  // .ba-hamb__line
+  &__line,
+  &:before,
+  &:after {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
+    transition: all 0.3s;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+  }
+  &--active {
+    .ba-hamb {
+      &__line {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+    }
+    &:before {
+      transform: rotate(45deg) translateY(10px) translateX(5px);
+    }
+    &:after {
+      transform: rotate(-48deg) translateY(-10px) translateX(6px);
+    }
+  }
+}
+
+.ba-oper {
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.96px;
+
+  // .ba-oper__login
+
+  &__login {
+  }
+
+  // .ba-oper__search
+
+  &__search {
+  }
+
+  // .ba-oper__cart
+
+  &__cart {
+  }
+}
+
+.ba-login,
+.ba-search,
+.ba-cart {
+  @media screen and (min-width: 1024px) {
+    //  border-left: 1px solid rgba($color: #fff, $alpha: 0.4);
+    padding: 0 15px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -21px;
+      left: 0;
+      height: 80px;
+      width: 1px;
+      background: rgba($color: #fff, $alpha: 0.4);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0 30px;
+  }
+}
+
+.ba-login {
+  // .ba-login__link
+
+  &__link {
+    color: currentColor;
+    text-decoration: none;
+    @media screen and (min-width: 1024px) {
+    }
+  }
+}
+.ba-search {
+  // .ba-search__btn
+
+  &__btn {
+    color: currentColor;
+    text-decoration: none;
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .icon {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+      @media screen and (min-width: 1024px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+.ba-cart {
+  // .ba-cart__btn
+
+  &__btn {
+    color: currentColor;
+    text-decoration: none;
+  }
+}
+
+a {
+  &:hover {
+    opacity: 0.6;
+  }
+}
